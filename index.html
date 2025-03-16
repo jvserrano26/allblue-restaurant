@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href=  "src/logo.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Allblue restaurant</title>
+</head>
+<style>
+      .fade{
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        .fade-up{
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+
+        }
+        @keyframes appear{
+            from{
+                opacity: 0;
+                scale: 0.5;
+            }
+            to{
+                opacity: 1;
+                scale: 1;
+            }
+        }
+        .fade-right {
+    animation: right 2s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%) scale(0.5); /* Starts off the screen to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1); /* Ends in its original position */
+    }
+}
+.fade-left {
+    animation: left 2s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) scale(0.5); /* Starts off the screen to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1); /* Ends in its original position */
+    }
+}
+
+
+    body{
+        background-color: #f7f4e3;
+    }
+    .navbar-toggler-icon::before {
+        top: -8px;
+    }
+
+    .navbar-toggler-icon::after {
+        top: 8px;
+    }
+
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+        background-color: transparent;
+    }
+
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .nav-link{
+        color: #e0a840;
+        transition: 1s;
+        font-size: 20px;
+        opacity: 0.7;
+    }
+
+    .nav-link:hover{
+        color: #e0a840;
+        
+        transition: 0.5s;
+        opacity: 2;
+    }
+
+    nav {
+        background-color: #253a4a;
+    }
+    .menu{
+       
+        transition: 1s;
+       
+        opacity: 0.7;
+    }
+
+    .menu:hover{
+       
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: 0.5s;
+        opacity: 1;
+    }
+    .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers content */
+    align-items: center; /* Horizontally centers content */
+    height: 100vh; /* Ensures the hero section takes up the full viewport height */
+    text-align: center; /* Ensures text is centered */
+}
+    .card-title{
+        background-color: #253a4a;
+    }
+</style>
+<body>
+    <section id="nav">
+        
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <div class="container">
+                <img src="src/logo.png" alt="" width="50px" style="border-radius: 100px;">
+                <a class="navbar-brand" href="#home" style="padding-left: 20px;color:  #e0a840;font-weight: bold;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;font-size: 25px;">Allblue</a>
+                
+                <!-- Toggler Button -->
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="" style="color: #e0a840;">
+                        ☰
+                       </span>
+                </button>
+
+                <!-- Collapsible Navbar -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#featured">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#new">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Featured</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#new">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 hero fade" >
+                   
+                    <h1 style=" color:#e0a840;font-size: 60px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">A genuine fine-dining experience awaits</h1>
+                    <p style="opacity: 0.8;font-size: 30px;color:#253a4a;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">The taste that make you feel awesome</p>
+                    <button style="  color: #253a4a; background-color: #f7f4e3; width: 9rem; padding: 10px; border: solid #e0a840 3px;font-size: 20px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Order now</button>
+                </div>
+                <div style="margin-bottom: 10px;margin-right: 0;" class="col-md-6 px-0">
+                    <img src="src/home1.png" alt="" class="img-fluid fade-right">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div style="background-color: #f7f4e3;" class="container">
+            <div  class="row text-center">
+                <div class="col-md-6 ">
+                    <img src="src/about1.png" alt="" class="img-fluid fade-up">
+                </div>
+                <div style="text-align: left;margin-top: 50px;" class="col-md-6 fade-right">
+                    <h1 style="font-size: 60px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;color: #e0a840;">Learn about us</h1>
+                    <p style="font-size: 20px;font-family:Arial, Helvetica, sans-serif;line-height: 35px;">At Allblue, dining is more than just a meal,it's an experience. Located in the heart of the city, we bring together the best ingredients and flavors, served with warmth and care. Whether you're here for a casual bite or a special evening, our menu blends classic favorites with fresh, creative dishes. At Allblue, we don’t just serve food; we create moments that stay with you. Join us and make memories that will keep you coming back.</p>
+                    <button style="margin-bottom: 10px; color: #253a4a; background-color: #f7f4e3; width: 8rem; padding: 7px; border: solid #e0a840 3px;font-size: 17px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Know more</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <p class="p-0 text-center" style="margin-top: 20px; color: #e0a840;font-size: 30px;margin: 0;">꧁ ༺ ⚜ ༻ ꧂</p>
+            <h1 style="font-size: 35px;color: #e0a840;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="text-center fade-up">Main Menu</h1>
+            <p style="padding-bottom: 50px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="text-center fade-up">At Allblue, we blend the finest ingredients with innovative flavors, creating a dining experience that’s as unforgettable as it is unique. Our commitment to exceptional service and a cozy, inviting atmosphere ensures that every visit feels like a special occasion.</p>
+            <div class="row text-center p-3 row-menu">
+                <div class="col-md-4 menu fade-left">
+                    <img src="src/menu1.png" alt="" class="img-fluid">
+                    <h1 style="color: #e0a840;margin: 10px;" class="h2">MAIN COURSE</h1>
+                    <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Our main courses are a perfect harmony of bold flavors and exquisite craftsmanship, offering a delicious balance and innovative creations that will satisfy every craving.</p>
+                    <button style="margin-bottom: 10px; color: #253a4a; background-color: #f7f4e3; width: 8rem; padding: 7px; border: solid #e0a840 3px;font-size: 17px;font-family: Verdana, Geneva, Tahoma, sans-serif;">See All</button>
+                </div>
+                <div class="col-md-4 menu fade-left">
+                    <img src="src/menu2.png" alt="" class="img-fluid">
+                    <h1 style="color: #e0a840;margin: 10px;" class="h2">APPETIZER</h1>
+                    <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"> Our appetizers are a delightful start to your meal, featuring fresh, vibrant ingredients that awaken your senses and set the stage for an unforgettable dining experience.</p>
+                    <button style="margin-bottom: 10px; color: #253a4a; background-color: #f7f4e3; width: 8rem; padding: 7px; border: solid #e0a840 3px;font-size: 17px;font-family: Verdana, Geneva, Tahoma, sans-serif;">See All</button>
+                </div>
+                <div class="col-md-4 menu fade-left">
+                    <img src="src/menu3.png" alt="" class="img-fluid">
+                    <h1 style="color: #e0a840;margin: 10px;" class="h2">BEVERAGE</h1>
+                    <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Our beverages are carefully crafted to complement every dish, offering a refreshing selection of wines, cocktails, and non-alcoholic options that elevate your dining experience.</p>
+                    <button style="margin-bottom: 10px; color: #253a4a; background-color: #f7f4e3; width: 8rem; padding: 7px; border: solid #e0a840 3px;font-size: 17px;font-family: Verdana, Geneva, Tahoma, sans-serif;">See All</button>
+                </div>
+            </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div style="margin-top: 20px;" class="row text-center" >
+                <div class="col-md-6">
+                    <p class="p-0 fade-up" style="color: #e0a840;font-size: 30px;margin: 0;">꧁ ༺ ⚜ ༻ ꧂</p>
+                    <h1 class="fade-up" style="font-size: 32px; padding-top: 0; color: #e0a840;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Featured</h1>
+                    <div class="row">
+                    <div class="col-md-4">
+                        <img src="src/seller1.png" alt="" class="img-fluid fade-left">
+                        <h1 class="h5 m-3" style="color: #253a4a;">Beef Wellington</h1>
+                        <p style="color: #e0a840; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">$17.99</p>
+                        <button style="margin-bottom: 10px; color: #253a4a; background-color: #f7f4e3; width: 7rem; padding: 7px; border: solid #e0a840 3px;font-size: 15px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Buy now</button>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="src/seller2.png" alt="" class="img-fluid fade-left">
+                        <h1 class="h5 m-3" style="color: #253a4a;">Foie de <br> Gras</h1>
+                        <p style="color: #e0a840; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">$56.99</p>
+                        <button style="margin-bottom: 10px; color: #253a4a; background-color: #f7f4e3; width: 7rem; padding: 7px; border: solid #e0a840 3px;font-size: 15px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Buy now</button>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="src/seller3.png" alt="" class="img-fluid fade-left">
+                        <h1 class="h5 m-3" style="color: #253a4a;">Saffron Risotto</h1>
+                        <p style="color: #e0a840; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">$7.89</p>
+                        <button style="margin-bottom: 10px; color: #253a4a; background-color: #f7f4e3; width: 7rem; padding: 7px; border: solid #e0a840 3px;font-size: 15px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Buy now</button>
+                    </div>
+                    <h1 class="fade-up" style="color: #253a4a; text-align: left;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Cavendish de Tuna</h1>
+                    <p class="fade-up" style=" opacity: 0.9; text-align: left;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Introducing the Cavendish de Tuna, a delightful fusion of seared tuna, tropical fruits, and a zesty citrus glaze, creating a refreshing and unforgettable dining experience. </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="src/feature.png" alt="" class="img-fluid fade-right" style="padding-bottom: 10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="col-md-12 text-center">
+        <img src="src/50-off.png" alt="" class="img-fluid fade-up" width="600" height="100">
+    </div>
+    <div class="col-md-12 text-center">
+        <button style="margin: 10px; color: #253a4a; background-color: #f7f4e3; width: 7rem; padding: 7px; border: solid #e0a840 3px;font-size: 15px;font-family: Verdana, Geneva, Tahoma, sans-serif;">Learn more</button>
+    </div>
+
+    <section>
+        <div class="container">
+            <p class="p-0 text-center" style="margin-top: 20px; color: #e0a840;font-size: 30px;margin: 0;">꧁ ༺ ⚜ ༻ ꧂</p>
+            <h1 style="font-size: 35px;color: #e0a840;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="text-center fade-up">Contact</h1>
+            <div class="row text-center ">
+               <div class="col-md-4 fade-left"  style=" padding-top: 20px; ">
+                <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                  <div class="card-title">
+                      <h1>📩</h1>
+                  </div>
+                  <div class="card-body">
+                    <h1 style="color: #e0a840; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Contact to us</h1>
+                    <p class="h5" style="opacity: 0.9;color: #253a4a;">Our friendly team is here to help you.</p>
+                    <a href="" style="text-decoration: none;color: #e0a840;font-size: 20px;">Allblue@gmail.com</a>
+                  </div>
+                </div>
+               </div>
+               <div class="col-md-4 fade-left" style="padding-top: 20px;padding-bottom: 10px;">
+                <div class="card" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                   <div class="card-title ">
+                     <h1 style="color: #e0a840;">📌</h1>
+                   </div> 
+                   <div class="card-body">
+                     <h1 style="color: #e0a840; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Location</h1>
+                     <p class="h5"  style="opacity: 0.9;color: #253a4a;">Come and visit our restaurant</p>
+                     <p>121 Rock Street ,21 Avenue <br>Victorias City Neg. Occ.</p>
+                    </div>
+                </div>
+               </div>
+               <div class="col-md-4 fade-left"  style=" padding-top: 20px;">
+                <div class="card" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                   <div class="card-title">
+                        <h1 style="color: #e0a840;">📞</h1>
+                    </div>
+                    <div class="card-body">
+                        <h1 style="color: #e0a840; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Phone</h1>
+                        <p class="h5"  style="opacity: 0.9;color: #253a4a;">Mon-fri from 8am to 10pm</p>
+                        <p>(0910) 877 8322</p>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <footer>
+            <div class="container-fluid " style="background-color: #253a4a;">
+                <div class="row my-3">
+                    <div class="col-md-3">
+                        <img src="src/logo.png" alt="" class="img-fluid fade-up">
+                    </div>
+                    <div class="col-md-3 fade-left">
+                        <h1 class="h1" style="color: #e0a840;padding-top: 20px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Sitemap</h1>
+                       <a style="text-decoration: none;color: grey;font-size: 25px;padding: 0;margin: 0;" href=""><p>Home</p></a> 
+                       <a style="text-decoration: none;color: grey;font-size: 25px;" href=""><p>About</p></a> 
+                       <a style="text-decoration: none;color: grey;font-size: 25px;" href=""><p>Menu</p></a> 
+                       <a style="text-decoration: none;color: grey;font-size: 25px;" href=""><p>Featured</p></a> 
+                       <a style="text-decoration: none;color: grey;font-size: 25px;" href=""><p>Contact</p></a> 
+                    </div>
+                    <div class="col-md-3 fade-left" >
+                        <h1 class="h1" style="color: #e0a840;padding-top: 20px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Menu</h1>
+                        <a style="text-decoration: none;color: grey;font-size: 25px;padding: 0;margin: 0;" href=""><p>Main course</p></a> 
+                        <a style="text-decoration: none;color: grey;font-size: 25px;" href=""><p>Appetizer</p></a> 
+                        <a style="text-decoration: none;color: grey;font-size: 25px;" href=""><p>Beverage</p></a> 
+                    </div>
+                    <div class="col-md-3 fade" style="margin-bottom: 10px;">
+                        <h1 class="h1" style="color: #e0a840;padding-top: 20px;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Join Our Newsletter</h1>
+                        <p style="color: gray;font-size: 20px;border: none;">We're excited to toast with you and make lasting memories together</p>
+                        <input style="height: 40px;border-radius: 100px;" type="text" placeholder="Your email address">
+                        <button style="color: #e0a840;border: none;font-size: 20px;border-radius: 100px;width: 50px;">➤</button>
+                    </div>
+                </div>
+                <h1 class="text-center h6 p-3 " style="margin-top: 10px;color: grey;border-top: #e0a840 solid 1px;">Copyright &copy;2025 Design by Jay Vhon Serrano</h1>
+            </div>
+        </footer>
+        
+    </section>
+    <!-- Use Bootstrap Bundle which includes Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
